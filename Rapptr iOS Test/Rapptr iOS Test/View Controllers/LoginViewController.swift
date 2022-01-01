@@ -38,12 +38,16 @@ class LoginViewController: BaseViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        prepareView()
+    }
+    
+    // MARK: - Supporting Methods
+    private func prepareView() {
         title = "Login"
         setupBackgroundImage(with: UIImage(named: "img_login"))
         setupViewConstraints()
     }
     
-    // MARK: - Supporting Methods
     /// checks if both textfields are filled before sending Login API
      private func validateTextField() -> Bool {
         if emailTextField.text!.isEmpty || passwordTextField.text!.isEmpty {
