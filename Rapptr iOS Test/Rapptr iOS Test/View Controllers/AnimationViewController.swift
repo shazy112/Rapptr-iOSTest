@@ -30,11 +30,15 @@ class AnimationViewController: BaseViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        prepareView()
+    }
+    
+    // MARK: - Supporting Methods
+    private func prepareView() {
         title = "Animation"
         setupImageView()
     }
     
-    // MARK: - Supporting Methods
     private func dragLogoImageView(gesture: UIPanGestureRecognizer) {
         //the translation method returns the amount of user's finger moved.
         let translation = gesture.translation(in: logoImageView)
