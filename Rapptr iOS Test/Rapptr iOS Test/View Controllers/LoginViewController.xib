@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
+            <connections>
+                <outlet property="emailTextField" destination="xoa-Sh-ZA6" id="hfI-Wj-qf3"/>
+                <outlet property="loginButton" destination="dNN-sf-pf9" id="eLa-Hw-l15"/>
+                <outlet property="passwordTextField" destination="9Yh-GL-2qX" id="VAJ-DP-WcD"/>
+                <outlet property="stackView" destination="exe-Wq-K4Z" id="9Dn-2Y-wzU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNN-sf-pf9" customClass="PrimaryButton" customModule="Rapptr_iOS_Test" customModuleProvider="target">
+                    <rect key="frame" x="30" y="222" width="315" height="55"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="LOGIN"/>
+                    <connections>
+                        <action selector="didPressLoginButton:" destination="-1" eventType="touchUpInside" id="Rjq-ek-LWJ"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="exe-Wq-K4Z">
+                    <rect key="frame" x="30" y="64" width="143" height="134"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="info@rapptrlabs.com" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xoa-Sh-ZA6" userLabel="UITextField" customClass="PrimaryTextField" customModule="Rapptr_iOS_Test" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="143" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="yUl-oF-zzm"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Test123" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Yh-GL-2qX" userLabel="UITextField" customClass="PrimaryTextField" customModule="Rapptr_iOS_Test" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="79" width="143" height="55"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <point key="canvasLocation" x="551.20000000000005" y="312.59370314842579"/>
+        </view>
+    </objects>
+</document>
