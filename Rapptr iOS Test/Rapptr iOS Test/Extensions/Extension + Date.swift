@@ -8,14 +8,11 @@
 import Foundation
 extension Date {
     
-    ///   Method to caluclate duration from a specified Date
-    /// - Returns: returns formatted time interval in string
-    func getTimeInvertal() -> String {
-        let executionTime = Date().timeIntervalSince(self)
-        let dateFormatter = DateComponentsFormatter()
-        dateFormatter.allowedUnits = [.hour, .minute, .second]
-        dateFormatter.unitsStyle = .full
-        guard let formattedTimeInterval = dateFormatter.string(from: executionTime) else {return ""}
-        return formattedTimeInterval
+    /* Caluclates duration from a specified Date
+     Multipled to 1000 to get time in ms
+     */
+    /// - Returns: time in ms
+    func getTimeInvertal() -> Int  {
+        return Int(Date().timeIntervalSince(self) * 1000)
     }
 }

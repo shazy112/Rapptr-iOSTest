@@ -84,7 +84,7 @@ class LoginViewController: BaseViewController {
             loginButton.setTitle("", for: .normal)
             client.login(email: emailTextField.text ?? "", password: passwordTextField.text ?? "") {[weak self] login, apiResponseTime  in
                 self?.setLoginButtonToDefault()
-                self?.createAlert(title: login.message ?? "", message: "Api Response Time: \(apiResponseTime)") {
+                self?.createAlert(title: login.message ?? "", message: "Api Response Time: \(apiResponseTime)ms") {
                     DispatchQueue.main.async {[weak self] in
                         self?.navigationController?.popViewController(animated: true)
                     }

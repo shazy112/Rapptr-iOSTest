@@ -26,7 +26,7 @@ import Alamofire
 class LoginClient {
     var loginURL = "http://dev.rapptrlabs.com/Tests/scripts/login.php"
     
-    typealias Success = (_ login: Login, _ timeTaken: String) -> ()
+    typealias Success = (_ login: Login, _ timeTaken: Int) -> ()
     typealias Failure = (_ message: String) -> ()
     
     func login(email: String, password: String, success: @escaping Success, failure: @escaping Failure) {
